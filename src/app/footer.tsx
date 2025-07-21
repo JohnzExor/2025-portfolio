@@ -28,9 +28,14 @@ const Footer = () => {
       <div className="col-span-2">
         <h1 className="font-bold mb-4">Get in Touch</h1>
         <ul className="space-y-2 text-muted-foreground">
-          <li className="flex items-center gap-2">
-            <Mail size={20} className=" shrink-0" />
-            <span>jimenojohnzyll@gmail.com</span>
+          <li>
+            <Link
+              href="mailto:jimenojohnzyll@gmail.com"
+              className="flex items-center gap-2"
+            >
+              <Mail size={20} className=" shrink-0" />
+              <span>jimenojohnzyll@gmail.com</span>
+            </Link>
           </li>
           <li className="flex items-center gap-2">
             <MapPin size={20} className=" shrink-0" />

@@ -1,19 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inconsolata } from "next/font/google";
 import "./globals.css";
 import Header from "./header";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import Footer from "./footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inconsolata = Inconsolata({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,18 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-b from-primary to-white min-h-screen flex flex-col items-center`}
+        className={`${inconsolata.className} antialiased bg-gradient-to-b from-primary to-white min-h-screen flex flex-col items-center`}
       >
         <ThemeProvider>
-          <div className="container space-y-4">
+          <div className="container space-y-2 md:space-y-4">
             <Header />
             {children}
-            <div className="md:h-[500px] overflow-hidden">
-              <Footer />
-              <div className="hidden md:flex justify-center w-full h-[250px] overflow-hidden relative">
-                <h1 className="text-[400px] absolute bottom-0">JIMENO</h1>
-              </div>
-            </div>
+            <Footer />
           </div>
         </ThemeProvider>
       </body>
