@@ -2,23 +2,25 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import profile from "/public/images/profile.jpeg";
 import { Briefcase, Component } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const SectionHero = () => {
   return (
-    <section className="col-span-2 space-y-2 md:space-y-0 md:grid grid-cols-3 gap-4">
+    <section
+      id="home"
+      className="col-span-2 space-y-2 md:space-y-0 md:grid grid-cols-3 gap-4"
+    >
       <div className="col-span-2 bg-background/50 rounded-3xl border-background/20 p-2 md:p-4 flex flex-col gap-2">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
-            <Component />
-            <span>Introduction</span>
-          </div>
-          <div className="flex items-center gap-2 bg-background py-1 px-3 rounded-2xl w-fit text-sm font-bold text-primary">
-            <Briefcase size={15} />
-            <span>Open to work</span>
-          </div>
+        <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
+          <Component />
+          <span>Introduction</span>
         </div>
 
-        <div className="bg-background rounded-2xl p-4 md:p-10">
+        <div className="bg-background rounded-2xl p-4 md:p-10 space-y-4">
+          <Badge>
+            <Briefcase size={15} />
+            <span>Open to work</span>
+          </Badge>
           <h1 className="text-xl md:text-3xl">
             Hey, I&lsquo;m <br />
             <span className="font-bold text-5xl md:text-8xl text-primary">
@@ -42,7 +44,7 @@ const SectionHero = () => {
           alt="profile"
           placeholder="blur"
           fill
-          className=" object-cover object-bottom hover:scale-110 duration-500"
+          className=" object-cover object-bottom hover:scale-110 duration-500 dark:brightness-75"
         />
       </div>
     </section>

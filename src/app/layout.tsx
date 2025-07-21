@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inconsolata } from "next/font/google";
 import "./globals.css";
 import Header from "./header";
-import { ThemeProvider } from "@/components/theme/theme-provider";
 import Footer from "./footer";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 
 const inconsolata = Inconsolata({ weight: "400", subsets: ["latin"] });
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inconsolata.className} antialiased bg-gradient-to-b from-primary to-white min-h-screen flex flex-col items-center`}
+        className={`${inconsolata.className} antialiased bg-gradient-to-b from-primary dark:from-primary/20 to-background min-h-screen flex flex-col items-center`}
       >
         <ThemeProvider>
           <div className="container space-y-2 md:space-y-4">
