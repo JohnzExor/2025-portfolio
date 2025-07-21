@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const SectionTech = () => {
   return (
-    <section className="p-2 md:p-4 rounded-3xl bg-white/50 backdrop-blur-lg border border-white/20 space-y-2 md:space-y-4">
+    <section className="p-2 md:p-4 rounded-3xl bg-background/50 backdrop-blur-lg border border-background/20 space-y-2 md:space-y-4">
       <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
         <Layers2 />
         <span>Tech Stack</span>
@@ -14,7 +14,7 @@ const SectionTech = () => {
         {techStack.map(({ description, image, name }, index) => (
           <li
             key={index}
-            className=" border border-white/20 bg-background p-3 rounded-2xl space-y-2"
+            className=" border border-background/20 bg-background p-4 rounded-2xl space-y-2"
           >
             <div className="relative w-[50px] h-[50px]">
               <Image src={image} fill alt={name} className="object-cover" />

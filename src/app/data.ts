@@ -26,9 +26,18 @@ export const techStack = [
 
 export const projects = [
   {
+    image: "/images/projects/puertoprincesa.png",
+    name: "Puerto Princesa City",
+    stack: ["Wordpress"],
+    link: "https://puertoprincesa.ph/",
+    description:
+      "Redesigned the official website of Puerto Princesa City for a modern and user-friendly experience.",
+  },
+  {
     image: "/images/projects/tulong.png",
     name: "Tulong!",
     stack: ["Nextjs", "Supabase", "Shadcn"],
+    link: "https://tulong-psu.vercel.app/",
     description:
       "Enhancing campus safety and emergency response at Palawan State University through a comprehensive reporting system designed to address maintenance issues, handbook violations, and emergency situations.",
   },
@@ -36,6 +45,7 @@ export const projects = [
     image: "/images/projects/lumine.png",
     name: "Lumine",
     stack: ["Reactjs", "Firebase", "Shadcn"],
+    link: "https://lum1ne.web.app/",
     description:
       "Lumine is a social platform designed for connecting with others, expressing thoughts, and sharing personal insights or rants.",
   },

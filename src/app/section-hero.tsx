@@ -1,27 +1,42 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import profile from "/public/images/profile.jpeg";
+import { Briefcase, Component } from "lucide-react";
 
 const SectionHero = () => {
   return (
-    <section className="col-span-2 md:grid grid-cols-5 gap-4 space-y-4 md:space-y-0">
-      <div className="col-span-3 flex flex-col gap-8 p-10 md:p-20 relative overflow-hidden rounded-3xl bg-white/50 backdrop-blur-lg border border-white/20">
-        <h1 className="text-5xl">
-          Hey, I&lsquo;m{" "}
-          <span className="font-bold text-5xl text-primary">
-            Johnzyll Jimeno
-          </span>
-          , A Full Stack Web Developer
-        </h1>
-        <p>
-          I care a lot about using design for positive impact, and enjoy
-          creating user-centric, delightful, and human experiences.
-        </p>
-        <div className="mt-auto">
+    <section className="col-span-2 space-y-2 md:space-y-0 md:grid grid-cols-3 gap-4">
+      <div className="col-span-2 bg-background/50 rounded-3xl border-background/20 p-2 md:p-4 flex flex-col gap-2">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
+            <Component />
+            <span>Introduction</span>
+          </div>
+          <div className="flex items-center gap-2 bg-background py-1 px-3 rounded-2xl w-fit text-sm font-bold text-primary">
+            <Briefcase size={15} />
+            <span>Open to work</span>
+          </div>
+        </div>
+
+        <div className="bg-background rounded-2xl p-4 md:p-10">
+          <h1 className="text-xl md:text-3xl">
+            Hey, I&lsquo;m <br />
+            <span className="font-bold text-5xl md:text-8xl text-primary">
+              Johnzyll Jimeno,
+            </span>
+            <br />A Full Stack Web Developer
+          </h1>
+          <p className="text-muted-foreground text-sm md:text-base">
+            I care a lot about using design for positive impact, and enjoy
+            creating user-centric, delightful, and human experiences.
+          </p>
+        </div>
+
+        <div className="mt-auto bg-background w-fit p-4 rounded-2xl">
           <Button>Contact me</Button>
         </div>
       </div>
-      <div className="relative rounded-3xl overflow-hidden col-span-2 h-[300px] md:h-[600px]">
+      <div className="relative rounded-3xl overflow-hidden h-[300px] md:h-[600px] border-1 border-background/20">
         <Image
           src={profile}
           alt="profile"
