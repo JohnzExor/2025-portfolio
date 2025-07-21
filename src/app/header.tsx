@@ -4,7 +4,7 @@ import SideSheet from "./side-sheet";
 
 const Header = () => {
   return (
-    <header className="p-2 flex items-center justify-between bg-white/50 backdrop-blur-lg border border-white/20 rounded-4xl mt-4 sticky top-4 z-50 shadow">
+    <header className="mx-4 md:mx-0 p-2 flex items-center justify-between bg-white/50 backdrop-blur-lg border border-white/20 rounded-4xl mt-4 sticky top-4 z-50 shadow">
       <div className="flex items-center gap-2 bg-white/80 py-3 px-6 rounded-3xl">
         <div className="w-6 h-6 bg-primary rounded-full"></div>
         <label className="font-bold text-primary">Johnz.Dev</label>

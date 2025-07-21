@@ -33,6 +33,9 @@ const page = async () => {
           />
         </div>
       </div>
+      <div className="p-10 md:p-20 rounded-3xl bg-white/80 backdrop-blur-lg border border-white/20">
+        <h1 className="text-primary text-2xl font-bold">Tech Stack</h1>
+      </div>
     </div>
   );
 };
