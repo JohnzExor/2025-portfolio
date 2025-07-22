@@ -3,6 +3,7 @@ import SectionContact from "./section-contact";
 import SectionHero from "./section-hero";
 import SectionProjects from "./section-projects";
 import SectionTech from "./section-tech";
+import SectionTestimonials from "./section-testimonials";
 
 const page = async () => {
   return (
@@ -10,6 +11,7 @@ const page = async () => {
       <SectionHero />
       <SectionAbout />
       <SectionTech />
+      <SectionTestimonials />
       <SectionProjects />
       <SectionContact />
     </main>
