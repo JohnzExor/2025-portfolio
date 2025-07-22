@@ -17,13 +17,13 @@ const SectionTech = () => {
         {techStack.map(({ description, image, name }, index) => (
           <li
             key={index}
-            className=" border border-background/20 bg-background p-4 rounded-2xl space-y-2"
+            className=" border border-background/20 bg-background p-4 rounded-2xl"
           >
-            <div className="relative w-[50px] h-[50px]">
+            <div className="relative w-[50px] h-[50px] mb-2">
               <Image src={image} fill alt={name} className="object-cover" />
             </div>
-            <h1 className="text-xl font-bold">{name}</h1>
-            <p>{description}</p>
+            <h1 className="text-lg font-bold">{name}</h1>
+            <p className="text-muted-foreground text-sm">{description}</p>
           </li>
         ))}
       </ul>

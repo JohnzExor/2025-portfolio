@@ -12,6 +12,7 @@ import { links } from "./data";
 import Link from "next/link";
 import { AlignRight, Sparkle, X } from "lucide-react";
 import { useState } from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const SideSheet = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +26,7 @@ const SideSheet = () => {
           <SheetTitle></SheetTitle>
           <SheetDescription></SheetDescription>
         </SheetHeader>
-        <div className="space-y-4 bg-background/20 p-4 rounded-2xl">
+        <div className="space-y-2 bg-background/20 p-4 rounded-2xl">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
               <Sparkle />
@@ -37,6 +38,17 @@ const SideSheet = () => {
             >
               <X />
             </button>
+          </div>
+
+          <div className="bg-background rounded-2xl p-4 flex items-center gap-2">
+            <Avatar>
+              <AvatarImage src="/images/profile.jpeg" />
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
+            <div className="-space-y-2">
+              <h1 className="text-sm text-muted-foreground">Portfolio of</h1>
+              <span className="text-lg font-bold">Johnzyll Jimeno</span>
+            </div>
           </div>
 
           <ul className="flex flex-col items-center gap-4 bg-background rounded-2xl py-4">

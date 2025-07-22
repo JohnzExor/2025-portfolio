@@ -1,7 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import { Mail, MapPin } from "lucide-react";
 import Link from "next/link";
-import { links } from "./data";
+import { links, socials } from "./data";
 
 const Footer = () => {
   return (
@@ -46,15 +46,11 @@ const Footer = () => {
       <div>
         <h1 className="font-bold mb-4">Connect</h1>
         <ul className="space-y-2 text-muted-foreground">
-          <li>
-            <Link href={"#"}>Facebook</Link>
-          </li>
-          <li>
-            <Link href={"#"}>Instagram</Link>
-          </li>
-          <li>
-            <Link href={"#"}>X</Link>
-          </li>
+          {socials.map(({ link, name }, index) => (
+            <li key={index}>
+              <Link href={link}>{name}</Link>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="col-span-6 mt-6">

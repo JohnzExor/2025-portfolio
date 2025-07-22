@@ -29,7 +29,7 @@ const SectionProjects = () => {
                   className="object-cover rounded-xl"
                 />
               </div>
-              <h1 className="text-primary text-xl font-bold">{name}</h1>
+              <h1 className="text-lg font-bold">{name}</h1>
               <ul className="flex gap-1">
                 {stack.map((name, index) => (
                   <li key={index}>
