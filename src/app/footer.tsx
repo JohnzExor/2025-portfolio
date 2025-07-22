@@ -10,8 +10,8 @@ const Footer = () => {
         <div>
           <h1 className="font-bold mb-4 text-xl text-primary">Johnzyll.</h1>
           <p className="text-muted-foreground">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            I'm a passionate individual who finds joy in both coding innovative
+            solutions and immersing myself in the world of gaming.
           </p>
         </div>
       </div>
@@ -48,7 +48,9 @@ const Footer = () => {
         <ul className="space-y-2 text-muted-foreground">
           {socials.map(({ link, name }, index) => (
             <li key={index}>
-              <Link href={link}>{name}</Link>
+              <Link target="_blank" href={link}>
+                {name}
+              </Link>
             </li>
           ))}
         </ul>

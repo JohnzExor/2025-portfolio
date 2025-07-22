@@ -70,7 +70,7 @@ const SectionHero = () => {
             alt="profile"
             placeholder="blur"
             fill
-            className=" object-cover object-bottom hover:scale-110 duration-500 dark:brightness-75"
+            className=" object-cover object-bottom hover:scale-110 duration-500 dark:brightness-75 -z-10"
           />
         </div>
       </div>
