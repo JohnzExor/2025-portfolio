@@ -116,3 +116,26 @@ export const testimonials = [
     date: "2025-07-05",
   },
 ];
+
+import { FolderKanban, BadgeCheck, Cpu } from "lucide-react";
+
+export const overviewStats = [
+  {
+    name: "Projects",
+    count: projects.length,
+    description: "Built and deployed apps and websites.",
+    icon: FolderKanban,
+  },
+  {
+    name: "Certificates",
+    count: 5,
+    description: "Earned from tech courses and training.",
+    icon: BadgeCheck,
+  },
+  {
+    name: "Technologies",
+    count: techStack.length,
+    description: "Tools and languages I've worked with.",
+    icon: Cpu,
+  },
+];

@@ -2,7 +2,7 @@ import Image from "next/image";
 import profile from "/public/images/profile.jpeg";
 import { Briefcase, Component, Link2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { socials } from "./data";
+import { overviewStats, socials } from "./data";
 import Link from "next/link";
 
 const SectionHero = () => {
@@ -12,7 +12,7 @@ const SectionHero = () => {
       className="col-span-2 space-y-2 md:space-y-0 md:grid grid-cols-3 gap-4"
     >
       <div className="col-span-2 space-y-2 md:space-y-4">
-        <div className="col-span-2 bg-background/50 rounded-3xl border-background/20 p-2 md:p-4 flex flex-col gap-2">
+        <div className="bg-background/50 rounded-3xl border-background/20 p-2 md:p-4 flex flex-col gap-2">
           <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
             <Component />
             <span>Introduction</span>
@@ -63,15 +63,33 @@ const SectionHero = () => {
         </div>
       </div>
 
-      <div className="p-2 md:p-4 bg-background/50 backdrop-blur-lg rounded-3xl border-1 border-background/20">
-        <div className="relative rounded-2xl overflow-hidden h-[300px] md:h-full">
-          <Image
-            src={profile}
-            alt="profile"
-            placeholder="blur"
-            fill
-            className=" object-cover object-bottom hover:scale-110 duration-500 dark:brightness-75 -z-10"
-          />
+      <div className="space-y-2 md:space-y-4 flex flex-col">
+        <div className="h-fit p-2 md:p-4 bg-background/50 backdrop-blur-lg rounded-3xl border-1 border-background/20">
+          <ul className="grid grid-cols-1 md:grid-cols-3 gap-2">
+            {overviewStats.map(
+              ({ count, description, icon: Icon, name }, index) => (
+                <li key={index} className="bg-background p-3 rounded-2xl">
+                  <div className="flex items-center justify-between gap-2 pb-4 text-primary">
+                    <Icon size={30} />
+                    <span className="text-xl font-bold">{count}</span>
+                  </div>
+                  <h1 className="font-bold">{name}</h1>
+                  <p className="text-muted-foreground text-sm">{description}</p>
+                </li>
+              )
+            )}
+          </ul>
+        </div>
+        <div className="h-full p-2 bg-background backdrop-blur-lg rounded-3xl border-1 border-background/20">
+          <div className="relative h-[300px] md:h-full">
+            <Image
+              src={profile}
+              alt="profile"
+              placeholder="blur"
+              fill
+              className=" object-cover object-bottom duration-500 dark:brightness-75 rounded-2xl hover:scale-105"
+            />
+          </div>
         </div>
       </div>
     </section>

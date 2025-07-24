@@ -5,7 +5,7 @@ import { links, socials } from "./data";
 
 const Footer = () => {
   return (
-    <footer className="space-y-4 md:space-y-0 rounded-2xl p-10 md:grid grid-cols-6 bg-background/80 backdrop-blur-lg border border-background/20 mb-4">
+    <footer className="space-y-4 md:space-y-0 rounded-2xl p-10 md:grid grid-cols-6 bg-background/80 backdrop-blur-lg border border-background/20 md:mb-4">
       <div className="col-span-2 w-2/3">
         <div>
           <h1 className="font-bold mb-4 text-xl text-primary">
