@@ -6,7 +6,7 @@ import { CodeXml } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="mx-1 md:mx-0 p-2 flex items-center justify-between bg-background/50 backdrop-blur-lg border border-background/20 rounded-4xl mt-2 md:mt-4 sticky top-2 md:top-4 z-50 shadow duration-500 ease-in-out">
+    <header className="mx-1 md:mx-0 p-1 md:p-2 flex items-center justify-between bg-background/50 backdrop-blur-lg border border-background/20 rounded-4xl mt-2 md:mt-4 sticky top-2 md:top-4 z-50 shadow duration-500 ease-in-out">
       <div className="flex items-center gap-2">
         <Link
           href={"/"}

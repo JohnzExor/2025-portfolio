@@ -1,7 +1,6 @@
-import { Layers2 } from "lucide-react";
 import React from "react";
 import { techStack } from "./data";
-import Image from "next/image";
+import { FaLayerGroup } from "react-icons/fa6";
 
 const SectionTech = () => {
   return (
@@ -10,18 +9,16 @@ const SectionTech = () => {
       className="p-2 md:p-4 rounded-3xl bg-background/50 backdrop-blur-lg border border-background/20 space-y-2 md:space-y-4"
     >
       <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
-        <Layers2 />
+        <FaLayerGroup size={20} />
         <span>Tech Stack</span>
       </div>
       <ul className="space-y-2 md:space-y-0 md:grid grid-cols-2 gap-3">
-        {techStack.map(({ description, image, name }, index) => (
+        {techStack.map(({ description, icon: Icon, name }, index) => (
           <li
             key={index}
             className=" border border-background/20 bg-background p-4 rounded-2xl"
           >
-            <div className="relative w-[50px] h-[50px] mb-2">
-              <Image src={image} fill alt={name} className="object-cover" />
-            </div>
+            <Icon size={40} className="text-primary" />
             <h1 className="text-lg font-bold">{name}</h1>
             <p className="text-muted-foreground text-sm">{description}</p>
           </li>

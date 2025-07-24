@@ -1,8 +1,8 @@
-import { FolderGit } from "lucide-react";
 import { projects } from "./data";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { FaBoxArchive } from "react-icons/fa6";
 
 const SectionProjects = () => {
   return (
@@ -11,7 +11,7 @@ const SectionProjects = () => {
       className="p-2 md:p-4 rounded-3xl bg-background/50 backdrop-blur-lg border border-background/20 space-y-2 md:space-y-4"
     >
       <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
-        <FolderGit />
+        <FaBoxArchive size={20} />
         <span>Projects</span>
       </div>
       <ul className="space-y-2 md:space-y-0 md:grid grid-cols-2 gap-3">

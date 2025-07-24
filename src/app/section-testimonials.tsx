@@ -1,8 +1,7 @@
 "use client";
 
-import { Quote } from "lucide-react";
 import { testimonials } from "./data";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 import Autoplay from "embla-carousel-autoplay";
 
@@ -13,6 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { FaQuoteLeft } from "react-icons/fa6";
 
 const SectionTestimonials = () => {
   return (
@@ -39,7 +39,7 @@ const SectionTestimonials = () => {
                 key={index}
                 className="bg-background p-4 rounded-2xl flex flex-col gap-2 h-full"
               >
-                <Quote className="text-primary" />
+                <FaQuoteLeft size={30} className="text-primary" />
                 <p className="text-sm">{description}</p>
 
                 <div className="mt-auto flex items-center gap-2">

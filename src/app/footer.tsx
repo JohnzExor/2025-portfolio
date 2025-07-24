@@ -2,6 +2,7 @@ import { Separator } from "@/components/ui/separator";
 import { Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 import { links, socials } from "./data";
+import { FaEnvelope, FaMap } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -35,12 +36,12 @@ const Footer = () => {
               href="mailto:jimenojohnzyll@gmail.com"
               className="flex items-center gap-2"
             >
-              <Mail size={20} className=" shrink-0" />
+              <FaEnvelope size={20} className=" shrink-0" />
               <span>jimenojohnzyll@gmail.com</span>
             </Link>
           </li>
           <li className="flex items-center gap-2">
-            <MapPin size={20} className=" shrink-0" />
+            <FaMap size={20} className=" shrink-0" />
             <span>Puerto Princesa City, Palawan, Philippines</span>
           </li>
         </ul>

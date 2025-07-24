@@ -1,3 +1,16 @@
+import {
+  FaBoxArchive,
+  FaCertificate,
+  FaDatabase,
+  FaDownload,
+  FaGithub,
+  FaLinkedin,
+  FaMedal,
+  FaReact,
+  FaWordpress,
+  FaXTwitter,
+} from "react-icons/fa6";
+import { RiNextjsLine } from "react-icons/ri";
 export const links = [
   { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
@@ -9,17 +22,17 @@ export const links = [
 export const techStack = [
   {
     name: "React",
-    image: "/images/tech/React.svg",
+    icon: FaReact,
     description: "A JavaScript library for building user interfaces.",
   },
   {
     name: "Nextjs",
-    image: "/images/tech/Next.js.svg",
+    icon: RiNextjsLine,
     description: "A React framework for building fast and scalable web apps.",
   },
   {
     name: "Wordpress",
-    image: "/images/tech/WordPress.svg",
+    icon: FaWordpress,
     description: "A popular CMS for creating and managing websites.",
   },
 ];
@@ -55,26 +68,26 @@ export const socials = [
   {
     name: "Resume",
     username: "@download",
-    image: "/images/links/download.svg",
+    icon: FaDownload,
     link: "images/links/resume.pdf",
   },
   {
     name: "Linkedln",
     username: "@jjimeno",
-    image: "/images/links/LinkedIn.svg",
+    icon: FaLinkedin,
     link: "https://www.linkedin.com/in/johnzyll-jimeno-b79244193/",
   },
   {
     name: "X",
     username: "@_xrcst",
-    image: "/images/links/Twitter.svg",
+    icon: FaXTwitter,
     link: "https://x.com/_xrcst",
   },
 
   {
     name: "Github",
     username: "@johnzExor",
-    image: "/images/links/GitHub.svg",
+    icon: FaGithub,
     link: "https://github.com/JohnzExor",
   },
 ];
@@ -117,25 +130,23 @@ export const testimonials = [
   },
 ];
 
-import { FolderKanban, BadgeCheck, Cpu } from "lucide-react";
-
 export const overviewStats = [
   {
     name: "Projects",
     count: projects.length,
     description: "Built and deployed apps and websites.",
-    icon: FolderKanban,
+    icon: FaBoxArchive,
   },
   {
     name: "Certificates",
     count: 5,
     description: "Earned from tech courses and training.",
-    icon: BadgeCheck,
+    icon: FaMedal,
   },
   {
     name: "Technologies",
     count: techStack.length,
     description: "Tools and languages I've worked with.",
-    icon: Cpu,
+    icon: FaDatabase,
   },
 ];

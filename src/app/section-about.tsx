@@ -1,4 +1,4 @@
-import { User } from "lucide-react";
+import { FaUser } from "react-icons/fa6";
 
 const SectionAbout = () => {
   return (
@@ -7,7 +7,7 @@ const SectionAbout = () => {
       className="p-2 md:p-4 rounded-3xl bg-background/50 backdrop-blur-lg border border-background/20 space-y-2 md:space-y-4"
     >
       <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
-        <User />
+        <FaUser size={20} />
         <span>About me</span>
       </div>
 

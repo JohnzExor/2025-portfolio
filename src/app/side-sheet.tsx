@@ -8,12 +8,13 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { links } from "./data";
+import { links, socials } from "./data";
 import Link from "next/link";
-import { AlignRight, Sparkle, X } from "lucide-react";
+import { AlignRight } from "lucide-react";
 import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
+import { PiSparkleFill } from "react-icons/pi";
+import { FaChevronRight, FaLink, FaX } from "react-icons/fa6";
 const SideSheet = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -21,22 +22,22 @@ const SideSheet = () => {
       <SheetTrigger className="bg-background/80 py-3 px-6 rounded-3xl md:hidden hover:animate-spin">
         <AlignRight className=" shrink-0" />
       </SheetTrigger>
-      <SheetContent className="w-full bg-primary/20 backdrop-blur-md border-0 p-2">
+      <SheetContent className="w-full bg-primary/20 backdrop-blur-md border-0">
         <SheetHeader hidden={true}>
           <SheetTitle></SheetTitle>
           <SheetDescription></SheetDescription>
         </SheetHeader>
-        <div className="space-y-2 bg-background/20 p-4 rounded-2xl">
+        <div className="space-y-2 bg-background/20 p-2 rounded-l-2xl h-full flex flex-col">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
-              <Sparkle />
+              <PiSparkleFill size={20} />
               <span>Menu</span>
             </div>
             <button
               onClick={() => setIsOpen(false)}
               className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary"
             >
-              <X />
+              <FaX size={20} />
             </button>
           </div>
 
@@ -64,6 +65,31 @@ const SideSheet = () => {
               </li>
             ))}
           </ul>
+          <div className="space-y-2">
+            <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
+              <FaLink size={20} />
+              <span>Menu</span>
+            </div>
+            <ul className="bg-background grid grid-cols-2 gap-4 p-4 rounded-2xl">
+              {socials.map(({ username, name, link }, index) => (
+                <li key={index}>
+                  <Link
+                    href={link}
+                    className="-space-y-2 flex justify-between items-center"
+                  >
+                    <div>
+                      <h1 className="font-bold text-primary">{name}</h1>
+                      <span className="text-sm">{username}</span>
+                    </div>
+                    <FaChevronRight className="text-primary" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <span className="text-center text-xs mt-auto">
+            © 2025 Johnzyll Jimeno | <br /> Portfolio. All rights reserved.
+          </span>
         </div>
       </SheetContent>
     </Sheet>

@@ -1,4 +1,4 @@
-import { Contact } from "lucide-react";
+import { FaPhone } from "react-icons/fa6";
 import ContactForm from "./contact-form";
 
 const SectionContact = () => {
@@ -8,7 +8,7 @@ const SectionContact = () => {
       className="p-2 md:p-4 rounded-3xl bg-background/50 backdrop-blur-lg border border-background/20 space-y-2 md:space-y-4"
     >
       <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
-        <Contact />
+        <FaPhone size={20} />
         <span>Contact</span>
       </div>
       <div className="bg-background p-4 rounded-2xl space-y-4">
