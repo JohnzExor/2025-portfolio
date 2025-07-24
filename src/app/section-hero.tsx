@@ -80,7 +80,7 @@ const SectionHero = () => {
             )}
           </ul>
         </div>
-        <div className="h-full p-2 bg-background backdrop-blur-lg rounded-3xl border-1 border-background/20">
+        <div className="h-full p-2 md:p-4 bg-background backdrop-blur-lg rounded-3xl border-1 border-background/20">
           <div className="relative h-[300px] md:h-full">
             <Image
               src={profile}
