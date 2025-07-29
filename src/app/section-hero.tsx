@@ -69,7 +69,7 @@ const SectionHero = () => {
 
       <div className="space-y-2 md:space-y-4 flex flex-col group">
         <div className="h-fit p-2 md:p-4 bg-background/50 backdrop-blur-lg rounded-3xl border-1 border-background/20">
-          <ul className="grid grid-cols-1 md:grid-cols-3 gap-2">
+          <ul className="grid grid-cols-1 xl:grid-cols-3 gap-2">
             {overviewStats.map(
               ({ count, description, icon: Icon, name }, index) => (
                 <li key={index} className="bg-background p-3 rounded-2xl">

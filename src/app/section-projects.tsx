@@ -14,7 +14,7 @@ const SectionProjects = () => {
         <FaBoxArchive size={20} />
         <span>Projects</span>
       </div>
-      <ul className="space-y-2 md:space-y-0 md:grid grid-cols-2 gap-3">
+      <ul className="space-y-2 lg:space-y-0 lg:grid grid-cols-2 gap-3">
         {projects.map(({ description, image, name, stack, link }, index) => (
           <li
             key={index}

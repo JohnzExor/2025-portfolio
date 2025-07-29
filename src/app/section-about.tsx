@@ -1,6 +1,9 @@
 import { FaUser } from "react-icons/fa6";
+import { aboutMe } from "./data";
+import { ChevronRight } from "lucide-react";
 
 const SectionAbout = () => {
+  const { icon: Icon, description, infoCards } = aboutMe;
   return (
     <section
       id="about"
@@ -11,19 +14,32 @@ const SectionAbout = () => {
         <span>About me</span>
       </div>
 
-      <div className="bg-background p-4 rounded-2xl space-y-4">
-        <h1 className="text-2xl">So who am I?</h1>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
+      <div className="space-y-2 xl:flex gap-3">
+        <div className="bg-background p-4 rounded-2xl xl:w-2/3 ">
+          <Icon size={30} className="text-primary" />
+          <h1 className="font-bold text-primary">Description</h1>
+          <p className="mt-2">{description}</p>
+        </div>
+        <ul className="space-y-2 w-full">
+          {infoCards.map(({ infos, title, icon: Icon }, index) => (
+            <li key={index} className="space-y-2 bg-background p-4 rounded-2xl">
+              <div className="flex items-center justify-between text-primary">
+                <h1 className="font-bold">{title}</h1>
+                <Icon />
+              </div>
+              <ul>
+                {infos.map((info, index) => (
+                  <li key={index} className="flex gap-1">
+                    <ChevronRight size={15} className="mt-0.5" />
+                    <span className="text-sm text-muted-foreground">
+                      {info}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

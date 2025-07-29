@@ -1,6 +1,5 @@
 import {
   FaBoxArchive,
-  FaCertificate,
   FaDatabase,
   FaDownload,
   FaGithub,
@@ -9,8 +8,13 @@ import {
   FaReact,
   FaWordpress,
   FaXTwitter,
+  FaLocationArrow,
+  FaUserGraduate,
+  FaLeaf,
+  FaShopify,
 } from "react-icons/fa6";
 import { RiNextjsLine } from "react-icons/ri";
+
 export const links = [
   { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
@@ -23,17 +27,22 @@ export const techStack = [
   {
     name: "React",
     icon: FaReact,
-    description: "A JavaScript library for building user interfaces.",
+    description: "Builds dynamic user interfaces.",
   },
   {
-    name: "Nextjs",
+    name: "Next.js",
     icon: RiNextjsLine,
-    description: "A React framework for building fast and scalable web apps.",
+    description: "Full-stack React framework.",
   },
   {
-    name: "Wordpress",
+    name: "WordPress",
     icon: FaWordpress,
-    description: "A popular CMS for creating and managing websites.",
+    description: "Popular content management system.",
+  },
+  {
+    name: "Shopify",
+    icon: FaShopify,
+    description: "eCommerce platform for online stores.",
   },
 ];
 
@@ -150,3 +159,24 @@ export const overviewStats = [
     icon: FaDatabase,
   },
 ];
+
+export const aboutMe = {
+  icon: FaLeaf,
+  description:
+    "I'm a full stack web developer passionate about building efficient, scalable, and user-focused web applications. With experience in both frontend and backend technologies, I enjoy turning complex problems into clean, maintainable code — and learning new tools along the way.",
+  infoCards: [
+    {
+      title: "Graduated",
+      icon: FaUserGraduate,
+      infos: [
+        "Bachelor of Science in Information Technology",
+        "Palawan State University · 2024",
+      ],
+    },
+    {
+      title: "Location",
+      icon: FaLocationArrow,
+      infos: ["Based in Palawan, Philippines", "Can WFH"],
+    },
+  ],
+};
