@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./header";
 import Footer from "./footer";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 const inconsolata = Inconsolata({ weight: "400", subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </div>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
