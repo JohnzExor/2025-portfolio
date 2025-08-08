@@ -6,19 +6,20 @@ import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { FaBriefcase, FaFeather, FaLink, FaUserPlus } from "react-icons/fa6";
+import SectionContainer from "./section-container";
+
 const SectionHero = () => {
   return (
     <section
       id="home"
-      className="col-span-2 space-y-2 md:space-y-0 md:grid grid-cols-3 gap-4"
+      className="col-span-2 space-y-2 md:space-y-0 md:grid grid-cols-3 gap-3"
     >
-      <div className="col-span-2 space-y-2 md:space-y-4">
-        <div className="bg-background/50 rounded-3xl border-background/20 p-2 md:p-4 flex flex-col gap-2">
-          <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
-            <FaFeather size={20} />
-            <span>Introduction</span>
-          </div>
-
+      <div className="col-span-2 space-y-2 md:space-y-3">
+        <SectionContainer
+          id="introduction"
+          name="Introduction"
+          icon={FaFeather}
+        >
           <div className="bg-background rounded-2xl p-4 md:p-10 space-y-4">
             <Badge>
               <FaBriefcase size={15} />
@@ -39,13 +40,9 @@ const SectionHero = () => {
               Hire me <FaUserPlus />
             </Link>
           </div>
-        </div>
-        <div className="bg-background/50 rounded-3xl border-background/20 p-2 md:p-4 space-y-2 md:space-y-4">
-          <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
-            <FaLink size={20} />
-            <span>Links</span>
-          </div>
-          <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        </SectionContainer>
+        <SectionContainer icon={FaLink} id="links" name="Links">
+          <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
             {socials.map(({ link, name, icon: Icon, username }, index) => (
               <li key={index} className="bg-background py-2 px-3 rounded-2xl">
                 <Link
@@ -64,11 +61,11 @@ const SectionHero = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </SectionContainer>
       </div>
 
-      <div className="space-y-2 md:space-y-4 flex flex-col group">
-        <div className="h-fit p-2 md:p-4 bg-background/50 backdrop-blur-lg rounded-3xl border-1 border-background/20">
+      <div className="space-y-2 md:space-y-3 flex flex-col group">
+        <div className="h-fit p-2 bg-background/50 backdrop-blur-lg rounded-3xl border-1 border-background/20">
           <ul className="grid grid-cols-1 xl:grid-cols-3 gap-2">
             {overviewStats.map(
               ({ count, description, icon: Icon, name }, index) => (
@@ -84,14 +81,14 @@ const SectionHero = () => {
             )}
           </ul>
         </div>
-        <div className="h-full p-2 md:p-4 bg-background backdrop-blur-lg rounded-3xl border-1 border-background/20 group-hover:bg-primary transition-colors duration-200">
+        <div className="h-full p-2 bg-background backdrop-blur-lg rounded-3xl border-1 border-background/20">
           <div className="relative h-[300px] md:h-full">
             <Image
               src={profile}
               alt="profile"
               placeholder="blur"
               fill
-              className=" object-cover object-bottom duration-500 dark:brightness-75 rounded-2xl hover:scale-105"
+              className=" object-cover object-bottom duration-500 dark:brightness-75 rounded-2xl"
             />
           </div>
         </div>

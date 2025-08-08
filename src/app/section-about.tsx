@@ -1,23 +1,18 @@
 import { FaUser } from "react-icons/fa6";
 import { aboutMe } from "./data";
 import { ChevronRight } from "lucide-react";
+import SectionContainer from "./section-container";
 
 const SectionAbout = () => {
   const { icon: Icon, description, infoCards } = aboutMe;
   return (
-    <section
-      id="about"
-      className="p-2 md:p-4 rounded-3xl bg-background/50 backdrop-blur-lg border border-background/20 space-y-2 md:space-y-4"
-    >
-      <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
-        <FaUser size={20} />
-        <span>About me</span>
-      </div>
-
-      <div className="space-y-2 xl:flex gap-3">
-        <div className="bg-background p-4 rounded-2xl xl:w-2/3 ">
-          <Icon size={30} className="text-primary" />
-          <h1 className="font-bold text-primary">Description</h1>
+    <SectionContainer icon={FaUser} name="About" id="about">
+      <div className="space-y-2 xl:flex gap-2">
+        <div className="bg-background p-4 rounded-2xl xl:max-w-1/2">
+          <div className="flex items-center gap-2">
+            <Icon size={30} className="text-primary" />
+            <h1 className="font-bold text-primary">Description</h1>
+          </div>
           <p className="mt-2">{description}</p>
         </div>
         <ul className="space-y-2 w-full">
@@ -41,7 +36,7 @@ const SectionAbout = () => {
           ))}
         </ul>
       </div>
-    </section>
+    </SectionContainer>
   );
 };
 

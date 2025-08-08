@@ -18,7 +18,7 @@ const SectionTestimonials = () => {
   return (
     <section
       id="testimonials"
-      className="col-span-2 p-2 md:p-4 rounded-3xl border border-background/20 bg-background/10 space-y-2 md:space-y-4 shadow"
+      className="col-span-2 p-2 px-4 rounded-3xl border border-background/20 bg-background/10 space-y-2 md:space-y-4 shadow"
     >
       <Carousel
         opts={{ loop: true }}

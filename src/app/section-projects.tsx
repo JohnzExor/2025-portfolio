@@ -3,46 +3,41 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { FaBoxArchive } from "react-icons/fa6";
+import SectionContainer from "./section-container";
+import { ChevronRight } from "lucide-react";
 
 const SectionProjects = () => {
   return (
-    <section
-      id="projects"
-      className="p-2 md:p-4 rounded-3xl bg-background/50 backdrop-blur-lg border border-background/20 space-y-2 md:space-y-4"
-    >
-      <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
-        <FaBoxArchive size={20} />
-        <span>Projects</span>
-      </div>
-      <ul className="space-y-2 lg:space-y-0 lg:grid grid-cols-2 gap-3">
+    <SectionContainer icon={FaBoxArchive} name="Projects" id="projects">
+      <ul className="grid grid-cols-1 lg:grid-cols-2 gap-2">
         {projects.map(({ description, image, name, stack, link }, index) => (
-          <li
-            key={index}
-            className="bg-background rounded-3xl overflow-hidden p-4 border border-background/20 "
-          >
+          <li key={index} className="bg-background p-3 rounded-2xl">
             <Link target="_blank" href={link} className="space-y-2">
-              <div className="relative w-full h-[200px]">
+              <div className="relative h-[10em] w-full overflow-hidden rounded-xl border">
                 <Image
                   src={image}
+                  alt={"image-" + { index }}
                   fill
-                  alt={name}
-                  className="object-cover rounded-xl"
+                  className="object-cover"
                 />
               </div>
-              <h1 className="text-lg font-bold">{name}</h1>
-              <ul className="flex gap-1">
-                {stack.map((name, index) => (
-                  <li key={index}>
-                    <Badge>{name}</Badge>
-                  </li>
-                ))}
-              </ul>
-              <p className="text-muted-foreground text-sm">{description}</p>
+              <div className="px-2 space-y-2">
+                <h1 className="font-bold text-primary">{name}</h1>
+                <ul className="flex gap-1">
+                  {stack.map((name, index) => (
+                    <li key={index}>
+                      <Badge>{name}</Badge>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-muted-foreground text-sm">{description}</p>
+                <ChevronRight className="text-primary ml-auto mt-auto" />
+              </div>
             </Link>
           </li>
         ))}
       </ul>
-    </section>
+    </SectionContainer>
   );
 };
 
