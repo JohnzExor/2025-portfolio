@@ -15,7 +15,7 @@ const SectionContainer = ({
   return (
     <section
       id={id}
-      className="p-2 rounded-3xl bg-background/50 backdrop-blur-lg border border-background/20 space-y-2"
+      className="p-2 rounded-3xl bg-background/50 backdrop-blur-lg border border-background/20 space-y-2 hover:scale-101 duration-300 ease-in-out"
     >
       <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
         <Icon size={20} />

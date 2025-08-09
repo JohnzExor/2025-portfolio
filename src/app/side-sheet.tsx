@@ -68,7 +68,7 @@ const SideSheet = () => {
           <div className="space-y-2">
             <div className="flex items-center gap-2 bg-background px-4 py-3 rounded-2xl w-fit text-primary">
               <FaLink size={20} />
-              <span>Menu</span>
+              <span>Links</span>
             </div>
             <ul className="bg-background grid grid-cols-2 gap-4 p-4 rounded-2xl">
               {socials.map(({ username, name, link }, index) => (
