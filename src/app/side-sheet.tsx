@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/sheet";
 import { links, socials } from "./data";
 import Link from "next/link";
-import { AlignRight } from "lucide-react";
+import { AlignRight, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { PiSparkleFill } from "react-icons/pi";
@@ -52,15 +52,17 @@ const SideSheet = () => {
             </div>
           </div>
 
-          <ul className="flex flex-col items-center gap-4 bg-background rounded-2xl py-4">
-            {links.map(({ link, name }, index) => (
+          <ul className="px-4 space-y-5 bg-background rounded-2xl py-4">
+            {links.map(({ link, name, icon: Icon }, index) => (
               <li key={index}>
                 <Link
                   href={link}
                   onClick={() => setIsOpen(false)}
-                  className="text-xl"
+                  className="text-xl flex items-center text-primary gap-4"
                 >
-                  {name}
+                  <Icon />
+                  <span>{name}</span>
+                  <ChevronRight className="ml-auto" />
                 </Link>
               </li>
             ))}

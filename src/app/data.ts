@@ -12,15 +12,19 @@ import {
   FaUserGraduate,
   FaLeaf,
   FaShopify,
+  FaUser,
+  FaFeather,
+  FaLayerGroup,
+  FaPhone,
 } from "react-icons/fa6";
 import { RiNextjsLine } from "react-icons/ri";
 
 export const links = [
-  { name: "Home", link: "#home" },
-  { name: "About", link: "#about" },
-  { name: "Stack", link: "#tech" },
-  { name: "Projects", link: "#projects" },
-  { name: "Contact", link: "#contact" },
+  { name: "Home", link: "#home", icon: FaFeather },
+  { name: "About", link: "#about", icon: FaUser },
+  { name: "Stack", link: "#tech", icon: FaLayerGroup },
+  { name: "Projects", link: "#projects", icon: FaBoxArchive },
+  { name: "Contact", link: "#contact", icon: FaPhone },
 ];
 
 export const techStack = [

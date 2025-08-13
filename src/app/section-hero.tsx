@@ -65,7 +65,7 @@ const SectionHero = () => {
       </div>
 
       <div className="space-y-2 md:space-y-3 flex flex-col group">
-        <div className="h-fit p-2 bg-background/50 backdrop-blur-lg rounded-3xl border-1 border-background/20 hover:scale-101 duration-300 ease-in-out">
+        <SectionContainer id="overview-stats">
           <ul className="grid grid-cols-1 xl:grid-cols-3 gap-2">
             {overviewStats.map(
               ({ count, description, icon: Icon, name }, index) => (
@@ -80,18 +80,18 @@ const SectionHero = () => {
               )
             )}
           </ul>
-        </div>
-        <div className="h-full p-2 bg-background backdrop-blur-lg rounded-3xl border-1 border-background/20 hover:scale-101 duration-300 ease-in-out">
+        </SectionContainer>
+        <SectionContainer id="dev-image" className="h-full bg-background">
           <div className="relative h-[300px] md:h-full">
             <Image
               src={profile}
               alt="profile"
               placeholder="blur"
               fill
-              className=" object-cover object-bottom duration-500 dark:brightness-75 rounded-2xl"
+              className=" object-cover object-center md:object-bottom duration-500 dark:brightness-75 rounded-2xl"
             />
           </div>
-        </div>
+        </SectionContainer>
       </div>
     </section>
   );
