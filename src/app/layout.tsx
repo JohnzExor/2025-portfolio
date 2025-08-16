@@ -9,9 +9,9 @@ import { Toaster } from "@/components/ui/sonner";
 const inconsolata = Inconsolata({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Johnzyll Jimeno Portfolio",
+  title: "Johnzyll Jimeno",
   description:
-    "         I'm a passionate individual who finds joy in both coding innovative solutions and immersing myself in the world of gaming.",
+    "I'm a passionate individual who finds joy in both coding innovative solutions and immersing myself in the world of gaming.",
 };
 
 export default function RootLayout({
